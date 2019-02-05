@@ -5,26 +5,15 @@ import Button from '@material-ui/core/Button'
 import ReactSVG from 'react-svg';
 import styled from 'styled-components'
 import 'typeface-roboto'
+import SwipeableTemporaryDrawer from './components/SwipableNav'
 import './App.css'
 
-const Title = styled.h1`
-  font-size: 1.5em;
+const AppWrapper = styled.div`
   text-align: center;
-  color: palevioletred;
+  background-color: #282c34;
 `
 
 const Header = styled.div`
-  /* background-image: url('./images/lionhead2.svg'); */
-  /* background-repeat: no-repeat; */
-  /* background-size: 100px; */
-  /* width: 200px; */
-  /* height: 200px; */
-  /* display: block; */
-  /* background-position: center; */
-  /* background-size: contain; */
-  /* height: 65vh; */
-
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,6 +21,11 @@ const Header = styled.div`
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+`
+
+const Title = styled.h1`
+  font-size: 1.5em;
+  color: palevioletred;
 `
 
 const LearnReactLink = styled.a`
@@ -50,22 +44,17 @@ const StyledButton = styled.button`
   border-radius: 3px;
 `
 
-const StyledReactSVG = styled(ReactSVG)`
-  /* .svg {
-    viewBox: 0 0 100 100
-  } */
-`
-
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <AppWrapper className="App">
+      <SwipeableTemporaryDrawer />
         <Header>
-          <Title>HELLO WORLD STYLED COMPONENT</Title>
+          <Title>`DYNASTY DRAFT BOARD`</Title>
           <ReactSVG
             className='HomePageLogo'
             src={lionhead}
-            svgStyle={{width: '40vw', height: 'auto', backgroundRepeat: 'repeat'}}
+            svgStyle={{height: '65vh', width: 'auto', backgroundSize: 'contain'}}
           />
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <LearnReactLink
@@ -80,7 +69,7 @@ class App extends Component {
           <StyledButton>Normal</StyledButton>
           <StyledButton primary>Primary</StyledButton>
         </Header>
-      </div>
+      </AppWrapper>
     );
   }
 }
