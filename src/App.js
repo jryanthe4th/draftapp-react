@@ -15,7 +15,7 @@ const AppWrapper = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: flex-start;
   align-content: flex-start;
 
   /* text-align: center; */
@@ -73,12 +73,12 @@ class App extends Component {
   render() {
     return (
       <AppWrapper className="App">
+        <SwipeableTemporaryDrawer />
         <ReactSVG
             className='HomePageLogo'
             src={lionhead}
             svgStyle={{height: '65vh', width: 'auto', backgroundSize: 'contain'}}
         />
-        <SwipeableTemporaryDrawer />
         <Header>
           <Title>`DYNASTY DRAFT BOARD`</Title>
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
