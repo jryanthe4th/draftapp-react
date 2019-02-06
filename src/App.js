@@ -82,14 +82,6 @@ class App extends Component {
         <Header>
           <Title>`DYNASTY DRAFT BOARD`</Title>
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          {/* <LearnReactLink
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </LearnReactLink> */}
           {/* <Button variant='contained' color='primary'>HELLO WORLD</Button> */}
         </Header>
         <StyledButton>Normal</StyledButton>
