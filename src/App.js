@@ -75,9 +75,9 @@ class App extends Component {
       <AppWrapper className="App">
         <SwipeableTemporaryDrawer />
         <ReactSVG
-            className='HomePageLogo'
-            src={lionhead}
-            svgStyle={{height: '65vh', width: 'auto', backgroundSize: 'contain'}}
+          className='HomePageLogo'
+          src={lionhead}
+          svgStyle={{height: '65vh', width: 'auto', backgroundSize: 'contain'}}
         />
         <Header>
           <Title>`DYNASTY DRAFT BOARD`</Title>
