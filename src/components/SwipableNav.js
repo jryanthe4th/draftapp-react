@@ -10,7 +10,8 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import MenuIcon from '@material-ui/icons/Menu';
 import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+import ViewComfyIcon from '@material-ui/icons/ViewComfy';
+import ChatIcon from "@material-ui/icons/Chat";
 
 const styles = {
   list: {
@@ -41,10 +42,10 @@ class SwipeableTemporaryDrawer extends React.Component {
     const sideList = (
       <div className={classes.list}>
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+          {['Draftboard', 'Rankings', 'Combine Results', 'Chat'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <ViewComfyIcon /> : <ChatIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
