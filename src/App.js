@@ -22,11 +22,15 @@ const AppWrapper = styled.div`
   background-color: #282c34;
 `
 
+const SvgWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+`
+
 const Header = styled.div`
-  /* flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* flex-direction: column; */
+  width: 100%;
+  /* font-size: calc(10px + 2vmin);
   color: white; */
 `
 
@@ -50,22 +54,26 @@ const StyledButton = styled.button`
   border: 2px solid palevioletred;
   border-radius: 3px; */
 
-  background-color: transparent !important;
-
-  border-radius: 0px !important;
-  border-color: #29B6F6 !important;
-  color: #29B6F6 !important;
+  background-color: transparent;
+  height: 30px;
+  border-radius: 0px;
+  border-color: #29B6F6;
+  color: #29B6F6;
   min-width: 200px;
   font-weight: bold;
+  justify-content: center;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 10px auto 10px auto;
 
   &:hover {
-  background-color: #29B6F6 !important;
-  color: black !important;
+    background-color: #29B6F6;
+    color: black;
   }
   &:focus {
-  box-shadow: none !important;
-  background-color: #29B6F6 !important;
-  color: black !important;
+    box-shadow: none;
+    background-color: #29B6F6;
+    color: black;
   }
 `
 
@@ -74,11 +82,13 @@ class App extends Component {
     return (
       <AppWrapper className="App">
         <SwipeableTemporaryDrawer />
-        <ReactSVG
-          className='HomePageLogo'
-          src={lionhead}
-          svgStyle={{height: '65vh', width: 'auto', backgroundSize: 'contain'}}
-        />
+        <SvgWrapper className='SvgWrapper'>
+          <ReactSVG
+            className='HomePageLogo'
+            src={lionhead}
+            svgStyle={{height: '60vh', width: 'auto'}}
+          />
+        </SvgWrapper>
         <Header>
           <Title>`DYNASTY DRAFT BOARD`</Title>
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
