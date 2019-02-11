@@ -5,20 +5,17 @@ import lionhead from './images/lionhead2.svg'
 import ReactSVG from 'react-svg';
 import styled from 'styled-components'
 import 'typeface-roboto'
-import SwipeableTemporaryDrawer from './components/SwipableNav'
+import SwipeableTemporaryDrawer from './components/shared/SwipableNav'
 import './App.css'
 
-const AppWrapper = styled.div`
+const AppContainer = styled.div`
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
-
-  /* text-align: center; */
   background-color: #282c34;
 `
 
@@ -28,10 +25,7 @@ const SvgWrapper = styled.div`
 `
 
 const Header = styled.div`
-  /* flex-direction: column; */
   width: 100%;
-  /* font-size: calc(10px + 2vmin);
-  color: white; */
 `
 
 const Title = styled.h1`
@@ -39,21 +33,7 @@ const Title = styled.h1`
   color: palevioletred;
 `
 
-// const LearnReactLink = styled.a`
-//   margin: 20px;
-// `
-
 const StyledButton = styled.button`
-  /* Adapt the colors based on primary prop */
-  /* background: ${props => props.primary ? "palevioletred" : "white"};
-  color: ${props => props.primary ? "white" : "palevioletred"};
-
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid palevioletred;
-  border-radius: 3px; */
-
   background-color: transparent;
   height: 30px;
   border-radius: 0px;
@@ -62,8 +42,6 @@ const StyledButton = styled.button`
   min-width: 200px;
   font-weight: bold;
   justify-content: center;
-  /* margin-left: auto;
-  margin-right: auto; */
   margin: 10px auto 10px auto;
 
   &:hover {
@@ -80,7 +58,7 @@ const StyledButton = styled.button`
 class App extends Component {
   render() {
     return (
-      <AppWrapper className="App">
+      <AppContainer className="App">
         <SwipeableTemporaryDrawer />
         <SvgWrapper className='SvgWrapper'>
           <ReactSVG
@@ -91,12 +69,10 @@ class App extends Component {
         </SvgWrapper>
         <Header>
           <Title>`DYNASTY DRAFT BOARD`</Title>
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          {/* <Button variant='contained' color='primary'>HELLO WORLD</Button> */}
         </Header>
         <StyledButton>Normal</StyledButton>
         <StyledButton primary>Primary</StyledButton>
-      </AppWrapper>
+      </AppContainer>
     );
   }
 }
