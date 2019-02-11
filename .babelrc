@@ -1,9 +1,16 @@
 {
-    "plugins": [
-        ["babel-plugin-styled-components", {
-            "ssr": true,
-            "displayName": true,
-            "fileName": true,
-        }]
+  "presets": [
+    "react-app"
+  ],
+  "plugins": [
+    [ "react-hot-loader/babel" ],
+    [
+      "babel-plugin-styled-components",
+      {
+        "ssr": true,
+        "displayName": true,
+        "fileName": true,
+      }
     ]
+  ]
 }
