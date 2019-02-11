@@ -12,10 +12,6 @@ const StyledTemplate = styled.div`
   background-color: #282c34;
 `
 
-const StyledFooter = styled.div`
-  text-align: center;
-`
-
 export default function Template(props) {
   return (
     <Router>
@@ -23,7 +19,6 @@ export default function Template(props) {
         <SwipeableTemporaryDrawer />
         <Route exact path='/' component={HomePage} />
         <Route exact path='/draftboard' component={DraftboardPage} />
-        <StyledFooter>&copy; 2018, DynastyDraftBoard, Inc.</StyledFooter>
       </StyledTemplate>
     </Router>
   )
