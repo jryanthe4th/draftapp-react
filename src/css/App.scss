@@ -14,7 +14,7 @@
 
 .table-container {
   text-align: center;
-  // margin: 15px;
+  margin: 50px;
   // background-color: transparent;
 
   .row {
@@ -47,11 +47,15 @@
 }
 
 // Responsive table css
-@breakpoint: 500px;
+// @breakpoint: 500px;
 
 /* Responsive
 ==================================== */
 @media all and (max-width: 800px) {
+  .table-container {
+    margin: 0px;
+  }
+
   .Rtable--collapse  {
     display: block;
     > .Rtable-cell { width: 100% !important; }

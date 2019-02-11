@@ -12,10 +12,9 @@ export default class Draftboard extends React.Component {
     return (
       <div className='draftboard-container'>
         <div className='table-container'>
-          <h1>This is the table-container</h1>
+          {/* <h1>This is the table-container</h1> */}
 
           {/* ROW 1 */}
-          <h3>ROUND 1</h3>
           <div className='Rtable Rtable--4cols Rtable--collapse row'>
             <div className='Rtable-cell column'>
                 <span className='owner-name'>Mack</span>
