@@ -4,7 +4,7 @@ import {hot} from 'react-hot-loader'
 
 // Styles
 import 'typeface-roboto'
-import './App.css'
+import './css/App.css'
 
 // JSX Modules
 import TemplateContainer from './components/TemplateContainer'

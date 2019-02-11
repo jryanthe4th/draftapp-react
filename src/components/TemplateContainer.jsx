@@ -1,5 +1,5 @@
-import React from 'react';
-import Template from './Template';
+import React from 'react'
+import Template from './Template'
 
 class TemplateContainer extends React.Component {
 
