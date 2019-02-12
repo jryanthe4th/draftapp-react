@@ -47,11 +47,12 @@
 }
 
 // Responsive table css
-// @breakpoint: 500px;
+$breakpoint800: 800px;
+$breakpoint400: 400px;
 
 /* Responsive
 ==================================== */
-@media all and (max-width: 800px) {
+@media all and (max-width: $breakpoint800) {
   .table-container {
     margin: 0px;
   }
@@ -59,7 +60,13 @@
   .Rtable--collapse  {
     display: block;
     > .Rtable-cell { width: 100% !important; }
-    > .Rtable-cell--foot { margin-bottom: 3em; }
+    > .Rtable-cell--foot { margin-bottom: 100px; }
+  }
+}
+
+@media all and (max-width: $breakpoint400) {
+  .column {
+    height: 75px !important;
   }
 }
 
@@ -67,5 +74,5 @@
 .no-flexbox .Rtable {
   display: block;
   > .Rtable-cell { width: 100%; }
-  > .Rtable-cell--foot { margin-bottom: 150px; }
+  > .Rtable-cell--foot { margin-bottom: 100px; }
 }
