@@ -22,16 +22,14 @@
   -webkit-overflow-scrolling: touch;
 }
 
-@media screen and (min-width: 500px) {
-  /* Center the Modal! */
-  .modal-area {
-    left: 50%;
-    top: 50%;
-    height: auto;
-    transform: translate(-50%, -50%);
-    max-width: 30em;
-    max-height: calc(100% - 1em);
-  }
+/* Center the Modal! */
+.modal-area {
+  left: 50%;
+  top: 20%;
+  height: auto;
+  min-height: 100px;
+  width: 60%;
+  transform: translate(-50%, -50%);
 }
 
 ._modal-close {
