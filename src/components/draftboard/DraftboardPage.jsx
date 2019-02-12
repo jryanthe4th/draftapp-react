@@ -1,31 +1,39 @@
-import React from 'react';
+import React from 'react'
+import {Container} from './Container'
 
 /* eslint react/prefer-stateless-function: 0 */
 /* eslint no-useless-constructor: 0 */
 
+const triggerText = 'Open Form'
+   const onSubmit = (event) => {
+   event.preventDefault(event)
+   console.log(event.target.name.value)
+   console.log(event.target.email.value)
+ }
+
 export default class Draftboard extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   render() {
     return (
       <div className='draftboard-container'>
+      <Container triggerText={triggerText} onSubmit={onSubmit} />
         <div className='table-container'>
-          <h1>This is the table-container</h1>
+          {/* <h1>This is the table-container</h1> */}
 
           {/* ROW 1 */}
-          <h3>ROUND 1</h3>
           <div className='Rtable Rtable--4cols Rtable--collapse row'>
             <div className='Rtable-cell column'>
                 <span className='owner-name'>Mack</span>
                 <span>1.01</span>
             </div>
             <div className='Rtable-cell column'>
-              
+
                 <span className='owner-name'>Canaan</span>
                 <span>1.02</span>
-              
+
             </div>
             <div className='Rtable-cell column'>
                 <span className='owner-name'>Jensen</span>
@@ -123,6 +131,6 @@ export default class Draftboard extends React.Component {
 
         </div>
       </div>
-    );
+    )
   }
 }
