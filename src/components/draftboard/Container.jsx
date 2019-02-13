@@ -6,13 +6,13 @@ export class Container extends Component {
   state = { isShown: false }
   showModal = () => {
     this.setState({ isShown: true }, () => {
-      this.closeButton.focus()
+      // this.closeButton.focus()
     })
     this.toggleScrollLock()
   }
   closeModal = () => {
     this.setState({ isShown: false })
-    this.TriggerButton.focus()
+    // this.TriggerButton.focus()
     this.toggleScrollLock()
   }
   onKeyDown = (event) => {
