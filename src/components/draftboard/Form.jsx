@@ -24,6 +24,7 @@ export const Form = ({ onSubmit }) => {
         label="Position"
         margin="normal"
       />
+      <h1>testing circleci config</h1>
       {/* <input
         type='text'
         className='form-control'
