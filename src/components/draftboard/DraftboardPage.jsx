@@ -4,7 +4,7 @@ import {Container} from './Container'
 /* eslint react/prefer-stateless-function: 0 */
 /* eslint no-useless-constructor: 0 */
 
-const triggerText = 'Open Form'
+const triggerText = 'DRAFT PLAYER'
    const onSubmit = (event) => {
    event.preventDefault(event)
    console.log(event.target.name.value)
@@ -21,7 +21,6 @@ export default class Draftboard extends React.Component {
       <div className='draftboard-container'>
       <Container triggerText={triggerText} onSubmit={onSubmit} />
         <div className='table-container'>
-          {/* <h1>This is the table-container</h1> */}
 
           {/* ROW 1 */}
           <div className='Rtable Rtable--4cols Rtable--collapse row'>

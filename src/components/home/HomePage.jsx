@@ -56,7 +56,7 @@ export default class HomePage extends Component {
           variant='outlined'
           size='medium'
           color='secondary'
-          clasName
+          className='home-button'
           style={{width: '200px', margin: '10px auto 10px auto', borderRadius: '0px'}}
         >
           Draft Board
@@ -67,7 +67,7 @@ export default class HomePage extends Component {
           variant='outlined'
           size='medium'
           color='secondary'
-          clasName
+          className='home-button'
           style={{width: '200px', margin: '10px auto 10px auto', borderRadius: '0px'}}
         >
           Sign In
