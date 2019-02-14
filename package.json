@@ -8,7 +8,8 @@
     "test": "node scripts/test.js"
   },
   "dependencies": {
-    "focus-trap-react": "^6.0.0"
+    "focus-trap-react": "^6.0.0",
+    "react-responsive": "^6.1.1"
   },
   "devDependencies": {
     "@babel/core": "7.1.6",
