@@ -15,16 +15,6 @@ const StyledHomePage = styled.div`
 const SvgWrapper = styled.div`
 `
 
-const Header = styled.div`
-  width: 100%;
-  text-align: center;
-`
-
-const Title = styled.h1`
-  font-size: 1.5em;
-  color: palevioletred;
-`
-
 // const styles = theme => ({
 //   margin: {
 //     margin: theme.spacing.unit,
