@@ -1,5 +1,6 @@
 import React from 'react'
 import {Container} from './Container'
+import styled from 'styled-components'
 // import ExpansionPanel from '@material-ui/core/ExpansionPanel'
 // import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
 // import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
@@ -9,6 +10,29 @@ import {Container} from './Container'
 
 /* eslint react/prefer-stateless-function: 0 */
 /* eslint no-useless-constructor: 0 */
+
+const StyledOwnerName = styled.span`
+  display: inline-flex;
+  text-align: left;
+  padding-left: 1px;
+  font-size: 0.75em;
+`
+
+const StyledDraftPickNumber = styled.span`
+  text-align: left;
+  padding-left: 1px;
+  font-size: 0.75em;
+`
+
+const StyledDraftPick = styled.span`
+  margin: auto;
+  font-weight: bold;
+  margin-top: 0px;
+`
+
+
+
+
 
 const triggerText = 'DRAFT PLAYER'
    const onSubmit = (event) => {
@@ -31,13 +55,14 @@ export default class Draftboard extends React.Component {
               {/* ROW 1 */}
               <div className='Rtable Rtable--4cols Rtable--collapse row'>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Mack</span>
-                    <span className='draft-pick-number'>1.01</span>
-                    <span className='draft-pick'>Josh Jacobs</span>
+                    <StyledOwnerName>Mack</StyledOwnerName>
+                    <StyledDraftPickNumber>1.01</StyledDraftPickNumber>
+                    <StyledDraftPick>Nick Bosa</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
                     <span className='owner-name'>Canaan</span>
                     <span className='draft-pick-number'>1.02</span>
+                    <span className='draft-pick'>Josh Allen</span>
                 </div>
                 <div className='Rtable-cell column'>
                     <span className='owner-name'>Jensen</span>
