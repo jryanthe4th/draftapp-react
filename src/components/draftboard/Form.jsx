@@ -19,6 +19,7 @@ export const Form = ({ onSubmit }) => {
       <TextField
         autoFocus
         id="standard-name"
+        className='input-field'
         label="Player Name"
         margin="normal"
       />
@@ -27,14 +28,19 @@ export const Form = ({ onSubmit }) => {
         label="Position"
         margin="normal"
       /> */}
-      <InputLabel htmlFor="position">Position</InputLabel>
-          <Select>
-            <MenuItem value={'WR'}>WR</MenuItem>
-            <MenuItem value={'RB'}>RB</MenuItem>
-            <MenuItem value={'TE'}>TE</MenuItem>
-            <MenuItem value={'QB'}>QB</MenuItem>
-            <MenuItem value={'DST'}>DST</MenuItem>
-          </Select>
+      <InputLabel
+        htmlFor="position"
+        className='input-field'
+      >
+        Position
+      </InputLabel>
+        <Select>
+          <MenuItem value={'WR'}>WR</MenuItem>
+          <MenuItem value={'RB'}>RB</MenuItem>
+          <MenuItem value={'TE'}>TE</MenuItem>
+          <MenuItem value={'QB'}>QB</MenuItem>
+          <MenuItem value={'DST'}>DST</MenuItem>
+        </Select>
       <h1>testing circleci config</h1>
       {/* <input
         type='text'

@@ -9,7 +9,7 @@ import DraftboardPage from './draftboard/DraftboardContainer'
 
 const StyledTemplate = styled.div`
   min-height: 100vh;
-  background-color: #282c34;
+  background-color: #212F3D;
 `
 
 export default function Template(props) {

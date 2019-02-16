@@ -6,7 +6,7 @@
   height: 100%;
   z-index: 10;
   transform: translateZ(0);
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-area {
@@ -16,7 +16,9 @@
   width: 100%;
   height: 100%;
   padding: 2.5em 1.5em 1.5em 1.5em;
-  background-color: #ffffff;
+  background-color: #2e3131;
+  border: 1px solid #EF5350;
+  color: #EF5350;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;

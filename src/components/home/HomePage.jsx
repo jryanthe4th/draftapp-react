@@ -47,9 +47,6 @@ export default class HomePage extends Component {
             svgStyle={{height: '60vh', width: '100%'}}
           />
         </SvgWrapper>
-        <Header>
-          <Title>`DYNASTY DRAFT BOARD`</Title>
-        </Header>
         <Button
           component={Link}
           to='/draftboard'
