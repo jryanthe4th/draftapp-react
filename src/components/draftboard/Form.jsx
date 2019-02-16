@@ -41,7 +41,6 @@ export const Form = ({ onSubmit }) => {
           <MenuItem value={'QB'}>QB</MenuItem>
           <MenuItem value={'DST'}>DST</MenuItem>
         </Select>
-      <h1>testing circleci config</h1>
       {/* <input
         type='text'
         className='form-control'
@@ -60,16 +59,17 @@ export const Form = ({ onSubmit }) => {
       /> */}
       </div>
       <div className='form-group'>
-      <Button
-        type='submit'
-        className='draft-player-button'
-        variant='contained'
-        size='medium'
-        color='secondary'
-        style={{width: '200px', margin: '10px auto 10px auto', borderRadius: '0px'}}
-      >
-        SUBMIT SELECTION
-      </Button>
+        <Button
+          type='submit'
+          className='draft-player-button'
+          variant='outlined'
+          size='medium'
+          color='secondary'
+          style={{width: '200px', margin: '10px auto 10px auto', borderRadius: '0px'}}
+        >
+          SUBMIT SELECTION
+        </Button>
+
       </div>
     </form>
   </FormWrapper>

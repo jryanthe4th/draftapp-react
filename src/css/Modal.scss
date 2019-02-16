@@ -6,7 +6,7 @@
   height: 100%;
   z-index: 10;
   transform: translateZ(0);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-area {
@@ -17,21 +17,23 @@
   height: 100%;
   padding: 2.5em 1.5em 1.5em 1.5em;
   background-color: #2e3131;
-  border: 1px solid #EF5350;
-  color: #EF5350;
+  // border: 1px solid yellowgreen;
+  color: yellowgreen;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-}
 
-/* Center the Modal! */
-.modal-area {
   left: 50%;
   top: 40%;
   height: auto;
   min-height: 100px;
   width: 60%;
   transform: translate(-50%, -50%);
+}
+
+/* Center the Modal! */
+.modal-area {
+  
 }
 
 ._modal-close {

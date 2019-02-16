@@ -12,10 +12,10 @@
   }
 } */
 
-// .draft-player-button {
-//   color: #EF5350 !important;
-//   border-color: #EF5350 !important;
-// }
+.draft-player-button {
+  color: yellowgreen !important;
+  border-color: yellowgreen !important;
+}
 
 .table-container {
   text-align: center;
@@ -38,23 +38,31 @@
     border: solid transparent;
     border-width: 1px;
     // background-color: #333;
-    background-color: #444;
+    background-color: #2e3131;
     // border-color: #EF5350;
-    margin: 2px;
+    margin: 3px;
+    color: yellowgreen;
   }
 
   .owner-name {
     // background-color: #444;
     // background-color: #000;
-    color: #EF5350;
     display: inline-flex;
     text-align: left;
     padding-left: 1px;
+    font-size: 0.75em;
+  }
+
+  .draft-pick-number {
+    text-align: left;
+    padding-left: 1px;
+    font-size: 0.75em;
   }
 
   .draft-pick {
-    text-align: left;
-    padding-left: 1px;
+    font-weight: bold;
+    padding: 2px;;
+
   }
 
   @media screen and (min-width: 800px) {
