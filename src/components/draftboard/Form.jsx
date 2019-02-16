@@ -19,6 +19,7 @@ export const Form = ({ onSubmit }) => {
       <TextField
         autoFocus
         id="standard-name"
+        className='input-field'
         label="Player Name"
         margin="normal"
       />
@@ -27,15 +28,19 @@ export const Form = ({ onSubmit }) => {
         label="Position"
         margin="normal"
       /> */}
-      <InputLabel htmlFor="position">Position</InputLabel>
-          <Select>
-            <MenuItem value={'WR'}>WR</MenuItem>
-            <MenuItem value={'RB'}>RB</MenuItem>
-            <MenuItem value={'TE'}>TE</MenuItem>
-            <MenuItem value={'QB'}>QB</MenuItem>
-            <MenuItem value={'DST'}>DST</MenuItem>
-          </Select>
-      <h1>testing circleci config</h1>
+      <InputLabel
+        htmlFor="position"
+        className='input-field'
+      >
+        Position
+      </InputLabel>
+        <Select>
+          <MenuItem value={'WR'}>WR</MenuItem>
+          <MenuItem value={'RB'}>RB</MenuItem>
+          <MenuItem value={'TE'}>TE</MenuItem>
+          <MenuItem value={'QB'}>QB</MenuItem>
+          <MenuItem value={'DST'}>DST</MenuItem>
+        </Select>
       {/* <input
         type='text'
         className='form-control'
@@ -54,16 +59,17 @@ export const Form = ({ onSubmit }) => {
       /> */}
       </div>
       <div className='form-group'>
-      <Button
-        type='submit'
-        className='draft-player-button'
-        variant='contained'
-        size='medium'
-        color='secondary'
-        style={{width: '200px', margin: '10px auto 10px auto', borderRadius: '0px'}}
-      >
-        SUBMIT SELECTION
-      </Button>
+        <Button
+          type='submit'
+          className='draft-player-button'
+          variant='outlined'
+          size='medium'
+          color='secondary'
+          style={{width: '200px', margin: '10px auto 10px auto', borderRadius: '0px'}}
+        >
+          SUBMIT SELECTION
+        </Button>
+
       </div>
     </form>
   </FormWrapper>

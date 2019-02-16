@@ -15,16 +15,6 @@ const StyledHomePage = styled.div`
 const SvgWrapper = styled.div`
 `
 
-const Header = styled.div`
-  width: 100%;
-  text-align: center;
-`
-
-const Title = styled.h1`
-  font-size: 1.5em;
-  color: palevioletred;
-`
-
 // const styles = theme => ({
 //   margin: {
 //     margin: theme.spacing.unit,
@@ -47,9 +37,6 @@ export default class HomePage extends Component {
             svgStyle={{height: '60vh', width: '100%'}}
           />
         </SvgWrapper>
-        <Header>
-          <Title>`DYNASTY DRAFT BOARD`</Title>
-        </Header>
         <Button
           component={Link}
           to='/draftboard'
