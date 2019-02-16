@@ -27,11 +27,8 @@ export const Form = ({ onSubmit }) => {
         label="Position"
         margin="normal"
       /> */}
-      <InputLabel htmlFor="age-simple">Position</InputLabel>
+      <InputLabel htmlFor="position">Position</InputLabel>
           <Select>
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
             <MenuItem value={'WR'}>WR</MenuItem>
             <MenuItem value={'RB'}>RB</MenuItem>
             <MenuItem value={'TE'}>TE</MenuItem>
