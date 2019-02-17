@@ -5,8 +5,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
-    "purge": "rm -rf node_modules; npm i"
+    "test": "node scripts/test.js"
   },
   "dependencies": {
     "focus-trap-react": "^6.0.0",
@@ -58,6 +57,7 @@
     "react-dev-utils": "^7.0.1",
     "react-dom": "^16.3.0",
     "react-hot-loader": "^4.6.5",
+    "react-image-magnify": "^2.7.4",
     "react-router-dom": "^4.3.1",
     "react-svg": "^7.2.6",
     "resolve": "1.8.1",
