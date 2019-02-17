@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import {Container} from './Container'
 import styled from 'styled-components'
 // import ExpansionPanel from '@material-ui/core/ExpansionPanel'
@@ -31,9 +31,6 @@ const StyledDraftPick = styled.span`
 `
 
 
-
-
-
 const triggerText = 'DRAFT PLAYER'
    const onSubmit = (event) => {
    event.preventDefault(event)
@@ -41,7 +38,7 @@ const triggerText = 'DRAFT PLAYER'
    console.log(event.target.email.value)
  }
 
-export default class Draftboard extends React.Component {
+export default class Draftboard extends Component {
   constructor(props) {
     super(props)
   }
@@ -60,101 +57,123 @@ export default class Draftboard extends React.Component {
                     <StyledDraftPick>Nick Bosa</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Canaan</span>
-                    <span className='draft-pick-number'>1.02</span>
-                    <span className='draft-pick'>Josh Allen</span>
+                    <StyledOwnerName>Canaan</StyledOwnerName>
+                    <StyledDraftPickNumber>1.02</StyledDraftPickNumber>
+                    <StyledDraftPick>Josh Allen</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Jensen</span>
-                    <span className='draft-pick-number'>1.03</span>
+                    <StyledOwnerName>Jensen</StyledOwnerName>
+                    <StyledDraftPickNumber>1.03</StyledDraftPickNumber>
+                    <StyledDraftPick>Quinnen Williams</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Riley</span>
-                    <span className='draft-pick-number'>1.04</span>
+                    <StyledOwnerName>Riley</StyledOwnerName>
+                    <StyledDraftPickNumber>1.04</StyledDraftPickNumber>
+                    <StyledDraftPick>Rashan Gary</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Jensen</span>
-                    <span className='draft-pick-number'>1.05</span>
+                    <StyledOwnerName>Jensen</StyledOwnerName>
+                    <StyledDraftPickNumber>1.05</StyledDraftPickNumber>
+                    <StyledDraftPick>Josh Jacobs</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Mack</span>
-                    <span className='draft-pick-number'>1.06</span>
+                    <StyledOwnerName>Mack</StyledOwnerName>
+                    <StyledDraftPickNumber>1.06</StyledDraftPickNumber>
+                    <StyledDraftPick>Dwayne Haskins</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Riley</span>
-                    <span className='draft-pick-number'>1.07</span>
+                    <StyledOwnerName>Riley</StyledOwnerName>
+                    <StyledDraftPickNumber>1.07</StyledDraftPickNumber>
+                    <StyledDraftPick>Drew Lock</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Jordan</span>
-                    <span className='draft-pick-number'>1.08</span>
+                    <StyledOwnerName>Jordan</StyledOwnerName>
+                    <StyledDraftPickNumber>1.08</StyledDraftPickNumber>
+                    <StyledDraftPick>Clelin Ferrell</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Canaan</span>
-                    <span className='draft-pick-number'>1.09</span>
+                    <StyledOwnerName>Canaan</StyledOwnerName>
+                    <StyledDraftPickNumber>1.09</StyledDraftPickNumber>
+                    <StyledDraftPick>Jawaan Taylor</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Mack</span>
-                    <span className='draft-pick-number'>1.10</span>
+                    <StyledOwnerName>Mack</StyledOwnerName>
+                    <StyledDraftPickNumber>1.10</StyledDraftPickNumber>
+                    <StyledDraftPick>Kyler Murray</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Riley</span>
-                    <span className='draft-pick-number'>1.11</span>
+                    <StyledOwnerName>Riley</StyledOwnerName>
+                    <StyledDraftPickNumber>1.11</StyledDraftPickNumber>
+                    <StyledDraftPick>Greedy Williams</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell Rtable-cell--foot column'>
-                    <span className='owner-name'>Danny</span>
-                    <span className='draft-pick-number'>1.12</span>
+                    <StyledOwnerName>Danny</StyledOwnerName>
+                    <StyledDraftPickNumber>1.12</StyledDraftPickNumber>
+                    <StyledDraftPick>Montez Sweat</StyledDraftPick>
                 </div>
               </div>
 
               {/* ROW 2 */}
               <div className='Rtable Rtable--4cols Rtable--collapse row'>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Mack</span>
-                    <span className='draft-pick-number'>2.01</span>
+                    <StyledOwnerName>Mack</StyledOwnerName>
+                    <StyledDraftPickNumber>2.01</StyledDraftPickNumber>
+                    <StyledDraftPick>Daniel Jones</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Riley</span>
-                    <span className='draft-pick-number'>2.02</span>
+                    <StyledOwnerName>Riley</StyledOwnerName>
+                    <StyledDraftPickNumber>2.02</StyledDraftPickNumber>
+                    <StyledDraftPick>Jeffery Simmons</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Riley</span>
-                    <span className='draft-pick-number'>2.03</span>
+                    <StyledOwnerName>Riley</StyledOwnerName>
+                    <StyledDraftPickNumber>2.03</StyledDraftPickNumber>
+                    <StyledDraftPick>Jonah Williams</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                  <span className='owner-name'>Riley</span>
-                    <span className='draft-pick-number'>2.04</span>
+                  <StyledOwnerName>Riley</StyledOwnerName>
+                    <StyledDraftPickNumber>2.04</StyledDraftPickNumber>
+                    <StyledDraftPick>Devin White</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Riley</span>
-                    <span className='draft-pick-number'>2.05</span>
+                    <StyledOwnerName>Riley</StyledOwnerName>
+                    <StyledDraftPickNumber>2.05</StyledDraftPickNumber>
+                    <StyledDraftPick>Christian Wilkins</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Riley</span>
-                    <span className='draft-pick-number'>2.06</span>
+                    <StyledOwnerName>Riley</StyledOwnerName>
+                    <StyledDraftPickNumber>2.06</StyledDraftPickNumber>
+                    <StyledDraftPick>Ed Oliver</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Riley</span>
-                    <span className='draft-pick-number'>2.07</span>
+                    <StyledOwnerName>Riley</StyledOwnerName>
+                    <StyledDraftPickNumber>2.07</StyledDraftPickNumber>
+                    <StyledDraftPick>TJ Hockensen</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Riley</span>
-                    <span className='draft-pick-number'>2.08</span>
+                    <StyledOwnerName>Riley</StyledOwnerName>
+                    <StyledDraftPickNumber>2.08</StyledDraftPickNumber>
+                    <StyledDraftPick>Marquise Brown</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Riley</span>
-                    <span className='draft-pick-number'>2.09</span>
+                    <StyledOwnerName>Riley</StyledOwnerName>
+                    <StyledDraftPickNumber>2.09</StyledDraftPickNumber>
+                    <StyledDraftPick>Trayvon Mullen</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Riley</span>
-                    <span className='draft-pick-number'>2.10</span>
+                    <StyledOwnerName>Riley</StyledOwnerName>
+                    <StyledDraftPickNumber>2.10</StyledDraftPickNumber>
+                    <StyledDraftPick>Jonathan Abram</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell column'>
-                    <span className='owner-name'>Riley</span>
-                    <span className='draft-pick-number'>2.11</span>
+                    <StyledOwnerName>Riley</StyledOwnerName>
+                    <StyledDraftPickNumber>2.11</StyledDraftPickNumber>
+                    <StyledDraftPick>Andre Dillard</StyledDraftPick>
                 </div>
                 <div className='Rtable-cell Rtable-cell--foot column'>
-                    <span className='owner-name'>Riley</span>
-                    <span className='draft-pick-number'>2.12</span>
+                    <StyledOwnerName>Riley</StyledOwnerName>
+                    <StyledDraftPickNumber>2.12</StyledDraftPickNumber>
+                    <StyledDraftPick>Deandre Baker</StyledDraftPick>
                 </div>
               </div>
 
