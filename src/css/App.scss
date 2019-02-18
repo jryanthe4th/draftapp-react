@@ -46,26 +46,6 @@
     color: #7befb2;
   }
 
-  .owner-name {
-    // background-color: #444;
-    // background-color: #000;
-    display: inline-flex;
-    text-align: left;
-    padding-left: 1px;
-    font-size: 0.75em;
-  }
-
-  .draft-pick-number {
-    text-align: left;
-    padding-left: 1px;
-    font-size: 0.75em;
-  }
-
-  .draft-pick {
-    font-weight: bold;
-    padding: 2px;
-  }
-
   @media screen and (min-width: 700px) {
     .column {
       flex: 1;
