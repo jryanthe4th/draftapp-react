@@ -27,7 +27,6 @@ const StyledDraftPickNumber = styled.span`
 const StyledDraftPick = styled.span`
   margin: auto;
   font-weight: bold;
-  margin-top: 0px;
 `
 
 
