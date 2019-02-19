@@ -106,9 +106,7 @@ const DraftPick = props =>
     <StyledOwnerName>{props.ownerName}</StyledOwnerName>
     <StyledDraftPickNumber>{props.pickNumber}</StyledDraftPickNumber>
     <StyledDraftPick>{props.playerSelected}</StyledDraftPick>
-    <StyledDraftPickPosition
-      ref={thi}
-    >{props.playerPosition}</StyledDraftPickPosition>
+    <StyledDraftPickPosition>{props.playerPosition}</StyledDraftPickPosition>
   </React.Fragment>
 
 // const getPositionColor = (props) => props.includes('RB') ? {bgcolor: '#fff'} : props.includes('WR') ? {bgcolor: '#555'} : props.includes('TE') ? {bgcolor: '#fe3'} : {}
