@@ -1,14 +1,18 @@
 import React, {Component} from 'react'
 
-import DraftBoard from './DraftboardPage';
+import Draftboard from './Draftboard'
+import Draftboard2 from './Draftboard2'
 
-class DraftBoardContainer extends Component {
+class DraftboardContainer extends Component {
 
   render() {
     return (
-      <DraftBoard />
-    );
+      <React.Fragment>
+        <Draftboard />
+        <Draftboard2 />
+      </React.Fragment>
+    )
   }
 }
 
-export default DraftBoardContainer
+export default DraftboardContainer
