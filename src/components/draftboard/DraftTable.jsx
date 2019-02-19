@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const draftSelections = [
-  {value:'Round1', list:[
+  {round:'Round1', draftPick:[
     {pickNumber: '1.01', ownerName: 'Mack', playerSelected: 'Nick Bosa', playerPosition: 'RB'},
     {pickNumber: '1.02', ownerName: 'Canaan', playerSelected: 'Josh Allen', playerPosition: 'WR'},
     {pickNumber: '1.03', ownerName: 'Jensen', playerSelected: 'Quinnen Williams', playerPosition: 'TE'},
@@ -16,7 +16,7 @@ const draftSelections = [
     {pickNumber: '1.11', ownerName: 'Riley', playerSelected: 'Greedy Williams', playerPosition: 'WR'},
     {pickNumber: '1.12', ownerName: 'Danny', playerSelected: 'Montez Sweat', playerPosition: 'RB'},
   ]},
-  {value:'Round2', list:[
+  {round:'Round2', draftPick:[
     {pickNumber: '2.01', ownerName: 'Mack', playerSelected: 'Nick Bosa 2', playerPosition: 'RB'},
     {pickNumber: '2.02', ownerName: 'Canaan', playerSelected: 'Josh Allen 2', playerPosition: 'WR'},
     {pickNumber: '2.03', ownerName: 'Jensen', playerSelected: 'Quinnen William 2', playerPosition: 'TE'},
@@ -30,7 +30,7 @@ const draftSelections = [
     {pickNumber: '2.11', ownerName: 'Riley', playerSelected: 'Greedy Williams 2', playerPosition: 'WR'},
     {pickNumber: '2.12', ownerName: 'Danny', playerSelected: 'Montez Sweat 2', playerPosition: 'RB'},
   ]},
-  {value:'Round3', list:[
+  {round:'Round3', draftPick:[
     {pickNumber: '3.01', ownerName: 'Mack', playerSelected: '', playerPosition: ''},
     {pickNumber: '3.02', ownerName: 'Canaan', playerSelected: '', playerPosition: ''},
     {pickNumber: '3.03', ownerName: 'Jensen', playerSelected: '', playerPosition: ''},
@@ -44,7 +44,7 @@ const draftSelections = [
     {pickNumber: '3.11', ownerName: 'Riley', playerSelected: '', playerPosition: ''},
     {pickNumber: '3.12', ownerName: 'Danny', playerSelected: '', playerPosition: ''},
   ]},
-  {value:'Round4', list:[
+  {round:'Round4', draftPick:[
     {pickNumber: '4.01', ownerName: 'Mack', playerSelected: '', playerPosition: ''},
     {pickNumber: '4.02', ownerName: 'Canaan', playerSelected: '', playerPosition: ''},
     {pickNumber: '4.03', ownerName: 'Jensen', playerSelected: '', playerPosition: ''},
@@ -59,7 +59,7 @@ const draftSelections = [
     {pickNumber: '4.12', ownerName: 'Danny', playerSelected: '', playerPosition: ''},
   ]},
 
-  {value:'Round5', list:[
+  {round:'Round5', draftPick:[
     {pickNumber: '5.01', ownerName: 'Mack', playerSelected: '', playerPosition: ''},
     {pickNumber: '5.02', ownerName: 'Canaan', playerSelected: '', playerPosition: ''},
     {pickNumber: '5.03', ownerName: 'Jensen', playerSelected: '', playerPosition: ''},
@@ -81,10 +81,15 @@ const DraftTable = () =>
       return (
         <StyledTableRow className='Rtable Rtable--4cols Rtable--collapse row' key={i}>
           {
-            round.list.map((draftPick, i) => {
+            round.draftPick.map((draftPick, i) => {
               return (
                 <StyledTableColumn className='Rtable-cell column' key={i}>
-                  <DraftSelection ownerName={draftPick.ownerName} pickNumber={draftPick.pickNumber} playerSelected={draftPick.playerSelected} playerPosition={draftPick.playerPosition} />
+                  <DraftSelection
+                    ownerName={draftPick.ownerName}
+                    pickNumber={draftPick.pickNumber}
+                    playerSelected={draftPick.playerSelected}
+                    playerPosition={draftPick.playerPosition}
+                  />
                 </StyledTableColumn>
               )
             })
@@ -150,7 +155,7 @@ const StyledDraftPick = styled.span`
 `
 
 const StyledDraftPickPosition = styled.span`
-  color: ${props => (props.playerPosition === 'RB' ? '#f973bc' : '#44bccc')};
+  color: ${props => (props.playerPosition === 'WR' ? '#f973bc' : '#44bccc')};
   font-weight: bold;
 `
 
