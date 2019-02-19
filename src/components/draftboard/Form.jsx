@@ -39,8 +39,6 @@ export const Form = () => {
         />
       </div>
       <div className='form-group'>
-
-
       <FormControl>
           <Select
             name='player-position'
@@ -48,7 +46,6 @@ export const Form = () => {
             inputProps={{
               id: 'age-required',
             }}
-
           >
             <MenuItem value={'Position'} disabled>
               Position
@@ -60,22 +57,6 @@ export const Form = () => {
             <MenuItem value={'DST'}>DST</MenuItem>
           </Select>
         </FormControl>
-
-
-
-        {/* <InputLabel
-          htmlFor="position"
-          className='input-field'
-        >
-          Position
-        </InputLabel>
-          <Select>
-            <MenuItem value={'WR'}>WR</MenuItem>
-            <MenuItem value={'RB'}>RB</MenuItem>
-            <MenuItem value={'TE'}>TE</MenuItem>
-            <MenuItem value={'QB'}>QB</MenuItem>
-            <MenuItem value={'DST'}>DST</MenuItem>
-          </Select> */}
       </div>
       <div className='form-group'>
         <Button
