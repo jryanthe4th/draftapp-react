@@ -1,62 +1,81 @@
 import React from 'react'
 import styled from 'styled-components'
 import Button from '@material-ui/core/Button'
-import TextField from '@material-ui/core/TextField';
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField'
+import Select from '@material-ui/core/Select'
+import MenuItem from '@material-ui/core/MenuItem'
+import { withStyles } from '@material-ui/core/styles'
+import FormControl from '@material-ui/core/FormControl'
 
 const FormWrapper = styled.div`
   text-align: center;
 `
 
-export const Form = ({ onSubmit }) => {
+const styles = theme => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  formControl: {
+    margin: theme.spacing.unit,
+    minWidth: 120,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing.unit * 2,
+  },
+})
+
+export const Form = () => {
   return (
   <FormWrapper>
-    <form onSubmit={onSubmit}>
+    <form autoComplete="off">
       <div className='form-group'>
-      {/* <label htmlFor='player-name'>Player Name</label> */}
-      <TextField
-        autoFocus
-        id="standard-name"
-        className='input-field'
-        label="Player Name"
-        margin="normal"
-      />
-      {/* <TextField
-        id="text"
-        label="Position"
-        margin="normal"
-      /> */}
-      <InputLabel
-        htmlFor="position"
-        className='input-field'
-      >
-        Position
-      </InputLabel>
-        <Select>
-          <MenuItem value={'WR'}>WR</MenuItem>
-          <MenuItem value={'RB'}>RB</MenuItem>
-          <MenuItem value={'TE'}>TE</MenuItem>
-          <MenuItem value={'QB'}>QB</MenuItem>
-          <MenuItem value={'DST'}>DST</MenuItem>
-        </Select>
-      {/* <input
-        type='text'
-        className='form-control'
-        id='player-name'
-        required
-        autoFocus
-      />
+        <TextField
+          autoFocus
+          id="standard-name"
+          className='input-field'
+          label="Player Name"
+          margin="normal"
+        />
       </div>
       <div className='form-group'>
-      <label htmlFor='position'>Position</label>
-      <input
-        type='text'
-        className='form-control'
-        id='position'
-        required
-      /> */}
+
+
+      <FormControl>
+          <Select
+            name='player-position'
+            value={'Position'}
+            inputProps={{
+              id: 'age-required',
+            }}
+
+          >
+            <MenuItem value={'Position'} disabled>
+              Position
+            </MenuItem>
+            <MenuItem value={'WR'}>WR</MenuItem>
+            <MenuItem value={'RB'}>RB</MenuItem>
+            <MenuItem value={'TE'}>TE</MenuItem>
+            <MenuItem value={'QB'}>QB</MenuItem>
+            <MenuItem value={'DST'}>DST</MenuItem>
+          </Select>
+        </FormControl>
+
+
+
+        {/* <InputLabel
+          htmlFor="position"
+          className='input-field'
+        >
+          Position
+        </InputLabel>
+          <Select>
+            <MenuItem value={'WR'}>WR</MenuItem>
+            <MenuItem value={'RB'}>RB</MenuItem>
+            <MenuItem value={'TE'}>TE</MenuItem>
+            <MenuItem value={'QB'}>QB</MenuItem>
+            <MenuItem value={'DST'}>DST</MenuItem>
+          </Select> */}
       </div>
       <div className='form-group'>
         <Button
@@ -76,4 +95,4 @@ export const Form = ({ onSubmit }) => {
   )
 }
 
-export default Form
+export default withStyles(styles)(Form)
