@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Container} from './Container'
+import {ModalContainer} from './ModalContainer'
 import styled from 'styled-components'
 // import ExpansionPanel from '@material-ui/core/ExpansionPanel'
 // import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
@@ -45,14 +45,14 @@ const StyledOwnerName = styled.span`
   text-align: left;
   padding-left: 1px;
   font-size: 0.75em;
-  font-weight: bold;
+  /* font-weight: bold; */
 `
 
 const StyledDraftPickNumber = styled.span`
   text-align: left;
   padding-left: 1px;
   font-size: 0.75em;
-  font-weight: bold;
+  /* font-weight: bold; */
 `
 
 const StyledDraftPick = styled.span`
@@ -60,6 +60,10 @@ const StyledDraftPick = styled.span`
   font-weight: bold;
 `
 
+const StyledDraftPickPosition = styled.span`
+  color: ${props => (props.position === 'RB' ? '#44bccc' : '#f973bc')};
+  font-weight: bold;
+`
 
 const triggerText = 'DRAFT PLAYER'
    const onSubmit = (event) => {
@@ -68,15 +72,17 @@ const triggerText = 'DRAFT PLAYER'
    console.log(event.target.email.value)
  }
 
+
+
+
 export default class Draftboard extends Component {
   constructor(props) {
     super(props)
   }
-
   render() {
     return (
       <div className='draftboard-container'>
-      <Container triggerText={triggerText} onSubmit={onSubmit} />
+      <ModalContainer triggerText={triggerText} onSubmit={onSubmit} />
         <StyledTableContainer className='table-container'>
 
               {/* ROW 1 */}
@@ -85,6 +91,7 @@ export default class Draftboard extends Component {
                     <StyledOwnerName>Mack</StyledOwnerName>
                     <StyledDraftPickNumber>1.01</StyledDraftPickNumber>
                     <StyledDraftPick>Nick Bosa</StyledDraftPick>
+                    <StyledDraftPickPosition>{'RB'}</StyledDraftPickPosition>
                 </StyledTableColumn>
                 <StyledTableColumn className='Rtable-cell column'>
                     <StyledOwnerName>Canaan</StyledOwnerName>

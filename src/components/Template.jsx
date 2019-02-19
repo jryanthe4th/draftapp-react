@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import SwipeableTemporaryDrawer from './shared/SwipableNav'
 // import ErrorBox from './shared/ErrorBoxContainer';
 import HomePage from './home/HomePageContainer'
-import DraftboardPage from './draftboard/DraftboardContainer'
+import Draftboard from './draftboard/DraftboardContainer'
 
 const StyledTemplate = styled.div`
   min-height: 100vh;
@@ -18,7 +18,7 @@ export default function Template(props) {
       <StyledTemplate>
         <SwipeableTemporaryDrawer />
         <Route exact path='/' component={HomePage} />
-        <Route exact path='/draftboard' component={DraftboardPage} />
+        <Route exact path='/draftboard' component={Draftboard} />
       </StyledTemplate>
     </Router>
   )
