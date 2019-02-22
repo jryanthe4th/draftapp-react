@@ -75,7 +75,7 @@ const draft = [
   ]},
 ]
 
-const DraftTable = () =>
+const CreateDraftTable = () =>
   <StyledTableContainer className='table-container'>
     {draft.map((round, i) => {
       return (
@@ -164,4 +164,4 @@ const StyledDraftPick = styled.span`
   font-weight: bold;
 `
 
-export default DraftTable
+export default CreateDraftTable
