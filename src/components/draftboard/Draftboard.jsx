@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {ModalContainer} from './ModalContainer'
-import DraftTable from './DraftTable'
+import CreateDraftTable from './CreateDraftTable'
 
 /* eslint react/prefer-stateless-function: 0 */
 /* eslint no-useless-constructor: 0 */
@@ -21,7 +21,7 @@ export default class Draftboard extends Component {
     return (
       <div className='draftboard-container'>
         <ModalContainer triggerText={triggerText} onSubmit={onSubmit} />
-        <DraftTable />
+        <CreateDraftTable />
       </div>
     )
   }
