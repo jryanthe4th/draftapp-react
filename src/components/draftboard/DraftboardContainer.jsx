@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
 import Draftboard from './Draftboard'
+import APIDataFetch from './APIDataFetch'
 
 class DraftboardContainer extends Component {
 
@@ -8,6 +9,7 @@ class DraftboardContainer extends Component {
     return (
       <React.Fragment>
         <Draftboard />
+        <APIDataFetch />
       </React.Fragment>
     )
   }
