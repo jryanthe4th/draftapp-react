@@ -16,7 +16,7 @@ const draftSelections = [
   {ownerName: 'Danny', pickNumber: '1.12', draftPick: 'Montez Sweat', playerPosition: 'RB'}
 ]
 
-const App = () =>
+const Draftboard2 = () =>
   <div>
     {draftSelections.map((draftSelection, i) => {
       return (
@@ -30,7 +30,7 @@ const DraftSelection = props =>
     <Name>{props.ownerName}</Name>
     <Bio>
       selects <strong>{props.playerPosition} {props.draftPick}</strong> with the{' '}
-      <strong>{props.pickNumber} of the draft</strong>.
+      <strong>{props.pickNumber}</strong>
     </Bio>
   </Card>
 
@@ -57,4 +57,4 @@ color: white;
 background: ${props => (props.playerPosition === 'RB' ? '#44bccc' : '#43f')};
 `
 
-export default App
+export default Draftboard2

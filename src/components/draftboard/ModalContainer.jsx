@@ -32,12 +32,12 @@ export class ModalContainer extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* <TriggerButton
+        <TriggerButton
           showModal={this.showModal}
           buttonRef={(n) => (this.TriggerButton = n)}
           triggerText={this.props.triggerText}
           className='draft-player-button'
-        /> */}
+        />
         {this.state.isShown ? (
           <Modal
             onSubmit={this.props.onSubmit}
