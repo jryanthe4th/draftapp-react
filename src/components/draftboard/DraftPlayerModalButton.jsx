@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Modal } from './Modal'
 import TriggerButton from './TriggerButton'
 
-export class ModalContainer extends Component {
+export class DraftPlayerModalButton extends Component {
   state = { isShown: false }
   showModal = () => {
     this.setState({ isShown: true }, () => {
@@ -53,4 +53,4 @@ export class ModalContainer extends Component {
   }
 }
 
-export default ModalContainer
+export default DraftPlayerModalButton

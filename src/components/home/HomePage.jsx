@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
+import Countdown from './Countdown'
 
 // Styling
 import lionhead from '../../css/images/lionhead2.svg'
@@ -28,6 +29,8 @@ export default class HomePage extends Component {
 
   // const { classes } = props;
   render(props) {
+    const currentDate = new Date()
+    const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? currentDate.getFullYear() +1 : currentDate.getFullYear()
     return (
       <StyledHomePage className='homepage-container'>
         <SvgWrapper className='SvgWrapper'>
@@ -37,6 +40,7 @@ export default class HomePage extends Component {
             svgStyle={{height: '60vh', width: '100%'}}
           />
         </SvgWrapper>
+        <Countdown date={`${year}-05-05T00:00:00`} />
         <Button
           component={Link}
           to='/draftboard'
