@@ -24,5 +24,5 @@ export default function Template(props) {
 // STYLED COMPONENTS
 const StyledTemplate = styled.div`
   min-height: 100vh;
-  background-color: #212F3D;
+  background-color: #2e3131;
 `

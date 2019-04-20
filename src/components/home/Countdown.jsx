@@ -79,34 +79,41 @@ class Countdown extends Component {
 
     return (
       <StyledCountdownContainer clasName='Countdown'>
-        <h1>HardMoney Rookie Draft</h1>
         <StyledCountdown>
           <StyledCountdownElements className='Countdown-col'>
-            <span className='Countdown-col-element'>
+            <StyledTime className='Countdown-col-element'>
               <strong>{this.addLeadingZeros(countDown.days)}</strong>
+            </StyledTime>
+            <StyledTimeLabel>
               <span>{countDown.days > 1 ? 'Days' : 'Day'}</span>
-            </span>
+            </StyledTimeLabel>
           </StyledCountdownElements>
 
           <StyledCountdownElements className='Countdown-col'>
-            <span className='Countdown-col-element'>
+            <StyledTime className='Countdown-col-element'>
               <strong>{this.addLeadingZeros(countDown.hours)}</strong>
-              <span>{countDown.hours > 24 ? 'Hours' : 'Hour'}</span>
-            </span>
+            </StyledTime>
+            <StyledTimeLabel className='Countdown-col-element'>
+              <span>{countDown.hours > 1 ? 'Hours' : 'Hour'}</span>
+            </StyledTimeLabel>
           </StyledCountdownElements>
 
           <StyledCountdownElements className='Countdown-col'>
-            <span className='Countdown-col-element'>
+            <StyledTime className='Countdown-col-element'>
               <strong>{this.addLeadingZeros(countDown.min)}</strong>
+            </StyledTime>
+            <StyledTimeLabel className='Countdown-col-element'>
               <span>Min</span>
-            </span>
+            </StyledTimeLabel>
           </StyledCountdownElements>
 
           <StyledCountdownElements className='Countdown-col'>
-            <span className='Countdown-col-element'>
+            <StyledTime className='Countdown-col-element'>
               <strong>{this.addLeadingZeros(countDown.sec)}</strong>
+            </StyledTime>
+            <StyledTimeLabel className='Countdown-col-element'>
               <span>Sec</span>
-            </span>
+            </StyledTimeLabel>
           </StyledCountdownElements>
         </StyledCountdown>
       </StyledCountdownContainer>
@@ -119,15 +126,32 @@ const StyledCountdownContainer = styled.div`
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
+  color: #7befb2;
+  width: 100%;
 `
 
 const StyledCountdown = styled.div`
-  flex-direction: row;
-  margin: auto;
+  /* flex-direction: row; */
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-flex;
+  /* width: 100%; */
 `
 
 const StyledCountdownElements = styled.span`
-  padding: 10px;
+  /* padding: 10px; */
+`
+
+const StyledTime = styled.div`
+  text-align: center;
+  font-size: 3em;
+  border: 5px;
+  width: 75px;
+`
+
+const StyledTimeLabel = styled.div`
+  text-align: center;
+  font-size: 1em;
 `
 
 Countdown.propTypes = {
