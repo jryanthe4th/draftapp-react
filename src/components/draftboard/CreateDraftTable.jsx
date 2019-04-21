@@ -119,7 +119,7 @@ createGlobalStyle`
 const StyledDraftPickPosition = styled.span`
   color: ${props => (props.playerPosition === 'QB' ? '#EA80FC' :
                       (props.playerPosition === 'RB' ? '#18FFFF' :
-                       (props.playerPosition === 'WR' ? '#7befb2' :
+                       (props.playerPosition === 'WR' ? '#69F0AE' :
                         (props.playerPosition === 'TE' ? '#CCFF90' :
                           (props.playerPosition === 'DST' ? '#e57373' :
                             (props.playerPosition === 'K' ? '#e57373' :
@@ -181,7 +181,7 @@ const StyledDraftPick = styled.span`
   color: ${props => (props.playerPosition === 'QB' ? '#EA80FC' :
                       (props.playerPosition === 'RB' ? '#18FFFF' :
                        (props.playerPosition === 'WR' ? '#69F0AE' :
-                        (props.playerPosition === 'TE' ? '#FF6E40' :
+                        (props.playerPosition === 'TE' ? '#CCFF90' :
                           (props.playerPosition === 'DST' ? '#e57373' :
                             (props.playerPosition === 'K' ? '#e57373' :
                               '#fff'
