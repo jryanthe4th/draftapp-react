@@ -1,14 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 const draft = [
   {round:'Round1', draftPicks:[
     {pickNumber: '1.01', ownerName: 'Mack', playerSelected: 'Nick Bosa', playerPosition: 'RB'},
     {pickNumber: '1.02', ownerName: 'Brayden', playerSelected: 'Josh Allen', playerPosition: 'WR'},
-    {pickNumber: '1.03', ownerName: 'Jensen', playerSelected: 'Quinnen Williams', playerPosition: 'TE'},
-    {pickNumber: '1.04', ownerName: 'Riley', playerSelected: 'Rashan Gary', playerPosition: 'QB'},
-    {pickNumber: '1.05', ownerName: 'Jensen', playerSelected: 'Josh Jacobs', playerPosition: 'DST'},
-    {pickNumber: '1.06', ownerName: 'Danny', playerSelected: 'Dwayne Haskins', playerPosition: 'RB'},
+    {pickNumber: '1.03', ownerName: 'Jensen', playerSelected: 'Quinnen Williams', playerPosition: 'RB'},
+    {pickNumber: '1.04', ownerName: 'Riley', playerSelected: 'Rashan Gary', playerPosition: 'WR'},
+    {pickNumber: '1.05', ownerName: 'Jensen', playerSelected: 'Josh Jacobs', playerPosition: 'RB'},
+    {pickNumber: '1.06', ownerName: 'Danny', playerSelected: 'Dwayne Haskins', playerPosition: 'WR'},
     {pickNumber: '1.07', ownerName: 'Mack', playerSelected: 'Drew Lock', playerPosition: 'WR'},
     {pickNumber: '1.08', ownerName: 'Jordan', playerSelected: 'Clelin Ferrell', playerPosition: 'TE'},
     {pickNumber: '1.09', ownerName: 'Jordan', playerSelected: 'Jawaan Taylor', playerPosition: 'QB'},
@@ -17,18 +17,18 @@ const draft = [
     {pickNumber: '1.12', ownerName: 'Joe', playerSelected: 'Montez Sweat', playerPosition: 'RB'},
   ]},
   {round:'Round2', draftPicks:[
-    {pickNumber: '2.01', ownerName: 'Joe', playerSelected: 'Nick Bosa 2', playerPosition: 'RB'},
-    {pickNumber: '2.02', ownerName: 'Brayden', playerSelected: 'Josh Allen 2', playerPosition: 'WR'},
-    {pickNumber: '2.03', ownerName: 'Joe', playerSelected: 'Quinnen William 2', playerPosition: 'TE'},
-    {pickNumber: '2.04', ownerName: 'Riley', playerSelected: 'Rashan Gary 2', playerPosition: 'QB'},
-    {pickNumber: '2.05', ownerName: 'Austin', playerSelected: 'Josh Jacobs 2', playerPosition: 'DST'},
-    {pickNumber: '2.06', ownerName: 'Danny', playerSelected: 'Dwayne Haskins 2', playerPosition: 'RB'},
-    {pickNumber: '2.07', ownerName: 'Danny', playerSelected: 'Drew Lock 2', playerPosition: 'WR'},
-    {pickNumber: '2.08', ownerName: 'Joe', playerSelected: 'Clelin Ferrell 2', playerPosition: 'TE'},
-    {pickNumber: '2.09', ownerName: 'Canaan', playerSelected: 'Jawaan Taylor 2', playerPosition: 'QB'},
-    {pickNumber: '2.10', ownerName: 'Joe', playerSelected: 'Kyler Murray 2', playerPosition: 'DST'},
-    {pickNumber: '2.11', ownerName: 'Brayden', playerSelected: 'Greedy Williams 2', playerPosition: 'WR'},
-    {pickNumber: '2.12', ownerName: 'Jake', playerSelected: 'Montez Sweat 2', playerPosition: 'RB'},
+    {pickNumber: '2.01', ownerName: 'Joe', playerSelected: '', playerPosition: ''},
+    {pickNumber: '2.02', ownerName: 'Brayden', playerSelected: '', playerPosition: ''},
+    {pickNumber: '2.03', ownerName: 'Joe', playerSelected: '', playerPosition: ''},
+    {pickNumber: '2.04', ownerName: 'Riley', playerSelected: '', playerPosition: ''},
+    {pickNumber: '2.05', ownerName: 'Austin', playerSelected: '', playerPosition: ''},
+    {pickNumber: '2.06', ownerName: 'Danny', playerSelected: '', playerPosition: ''},
+    {pickNumber: '2.07', ownerName: 'Danny', playerSelected: '', playerPosition: ''},
+    {pickNumber: '2.08', ownerName: 'Joe', playerSelected: '', playerPosition: ''},
+    {pickNumber: '2.09', ownerName: 'Canaan', playerSelected: '', playerPosition: ''},
+    {pickNumber: '2.10', ownerName: 'Joe', playerSelected: '', playerPosition: ''},
+    {pickNumber: '2.11', ownerName: 'Brayden', playerSelected: '', playerPosition: ''},
+    {pickNumber: '2.12', ownerName: 'Jake', playerSelected: '', playerPosition: ''},
   ]},
   {round:'Round3', draftPicks:[
     {pickNumber: '3.01', ownerName: 'Jake', playerSelected: '', playerPosition: ''},
@@ -75,7 +75,7 @@ const draft = [
   ]},
 ]
 
-const CreateDraftTable = () =>
+const CreateDraftTable = () => (
   <StyledTableContainer className='table-container'>
     {draft.map((round, i) => {
       return (
@@ -100,21 +100,35 @@ const CreateDraftTable = () =>
       )
     })}
   </StyledTableContainer>
+)
 
 const DraftPick = props =>
   <React.Fragment>
     <StyledOwnerName>{props.ownerName}</StyledOwnerName>
     <StyledDraftPickNumber>{props.pickNumber}</StyledDraftPickNumber>
-    <StyledDraftPick>{props.playerSelected}</StyledDraftPick>
-    <StyledDraftPickPosition>{props.playerPosition}</StyledDraftPickPosition>
+    <StyledDraftPick playerPosition={props.playerPosition}>{props.playerSelected}</StyledDraftPick>
+    <StyledDraftPickPosition playerPosition={props.playerPosition}>{props.playerPosition}</StyledDraftPickPosition>
   </React.Fragment>
 
 // const getPositionColor = (props) => props.includes('RB') ? {bgcolor: '#fff'} : props.includes('WR') ? {bgcolor: '#555'} : props.includes('TE') ? {bgcolor: '#fe3'} : {}
 
+createGlobalStyle`
+
+`
 
 const StyledDraftPickPosition = styled.span`
-  color: ${props => (props.playerPosition === 'RB' ? '#f973bc' : '#44bccc')};
+  color: ${props => (props.playerPosition === 'QB' ? '#EA80FC' :
+                      (props.playerPosition === 'RB' ? '#18FFFF' :
+                       (props.playerPosition === 'WR' ? '#7befb2' :
+                        (props.playerPosition === 'TE' ? '#CCFF90' :
+                          (props.playerPosition === 'DST' ? '#e57373' :
+                            (props.playerPosition === 'K' ? '#e57373' :
+                              '#fff'
+                            ))))))
+  };
   font-weight: bold;
+  margin-top: auto;
+  margin-bottom: 6px;
 `
 
 const StyledTableContainer = styled.div`
@@ -138,30 +152,45 @@ const StyledTableColumn = styled.div`
   border: solid transparent;
   border-width: 2px;
   border-radius: 1px;
-  background-color: #18222c;
+  background-color: #212121;
   margin: 1px;
   text-align: center;
-  color: #7befb2;
+  /* color: #7befb2; */
 `
 
 const StyledOwnerName = styled.span`
+  flex-direction: column;
   display: inline-flex;
   text-align: left;
   padding-left: 1px;
   font-size: 0.75em;
+  color: #fff;
   /* font-weight: bold; */
 `
 
 const StyledDraftPickNumber = styled.span`
-  text-align: left;
+  display: inline-flex;
+  text-align: right;
   padding-left: 1px;
   font-size: 0.75em;
+  color: #fff;
   /* font-weight: bold; */
 `
 
 const StyledDraftPick = styled.span`
-  margin-top: 4px;
+  color: ${props => (props.playerPosition === 'QB' ? '#EA80FC' :
+                      (props.playerPosition === 'RB' ? '#18FFFF' :
+                       (props.playerPosition === 'WR' ? '#69F0AE' :
+                        (props.playerPosition === 'TE' ? '#FF6E40' :
+                          (props.playerPosition === 'DST' ? '#e57373' :
+                            (props.playerPosition === 'K' ? '#e57373' :
+                              '#fff'
+                            ))))))
+  };
+  margin-top: 2px;
   font-weight: bold;
+  /* margin: auto; */
+  /* color: #fff; */
 `
 
 export default CreateDraftTable
