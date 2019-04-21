@@ -30,6 +30,13 @@ export default class HomePage extends Component {
   // const { classes } = props;
   render(props) {
     const currentDate = new Date()
+    // const currentDate = new Date().getUTCDate()
+    // const localTime = currentDate.getTime()
+    // const localOffset = currentDate.getTimezoneOffset() * 60000
+    // const utc = localTime + localOffset
+    // const offset = -8;
+    // const pacificTimeZone = utc + (3600000*offset)
+    // currentDate.
     const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? currentDate.getFullYear() +1 : currentDate.getFullYear()
     return (
       <StyledHomePage className='homepage-container'>
