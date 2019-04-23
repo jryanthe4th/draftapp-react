@@ -1,6 +1,9 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Countdown from './Countdown'
+// import Moment from 'react-moment'
+// import 'moment-timezone'
+import dayjs from 'dayjs'
 
 // Styling
 import lionhead from '../../css/images/lionhead2.svg'
@@ -29,7 +32,7 @@ export default class HomePage extends Component {
 
   // const { classes } = props;
   render(props) {
-    const currentDate = new Date()
+    const currentDate = new dayjs()
     // const currentDate = new Date().getUTCDate()
     // const localTime = currentDate.getTime()
     // const localOffset = currentDate.getTimezoneOffset() * 60000
@@ -37,7 +40,7 @@ export default class HomePage extends Component {
     // const offset = -8;
     // const pacificTimeZone = utc + (3600000*offset)
     // currentDate.
-    const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? currentDate.getFullYear() +1 : currentDate.getFullYear()
+    const year = (currentDate.get('month') === 11 && currentDate.get('date') > 23) ? currentDate.get('year') +1 : currentDate.get('year')
     return (
       <StyledHomePage className='homepage-container'>
         <SvgWrapper className='SvgWrapper'>

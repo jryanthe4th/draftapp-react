@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import dayjs from 'dayjs'
 
 class Countdown extends Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class Countdown extends Component {
   }
 
   calculateCountdown(endDate) {
-    let diff = (Date.parse(new Date(endDate)) - Date.parse(new Date())) / 1000
+    let diff = (Date.parse(new dayjs(endDate)) - Date.parse(new dayjs())) / 1000
 
     // clear countdown when date is reached
     if (diff <= 0) return false
@@ -159,7 +160,7 @@ Countdown.propTypes = {
 }
 
 Countdown.defaultProps = {
-  date: new Date()
+  date: new dayjs()
 }
 
 export default Countdown
