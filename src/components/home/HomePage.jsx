@@ -40,7 +40,7 @@ export default class HomePage extends Component {
     // const offset = -8;
     // const pacificTimeZone = utc + (3600000*offset)
     // currentDate.
-    const year = (currentDate.get('month') === 11 && currentDate.get('date') > 23) ? currentDate.get('year') +1 : currentDate.get('year')
+    const year = currentDate.get('year')
     return (
       <StyledHomePage className='homepage-container'>
         <SvgWrapper className='SvgWrapper'>
