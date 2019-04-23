@@ -9,7 +9,7 @@ class DraftboardContainer extends Component {
     return (
       <React.Fragment>
         <Draftboard />
-        <APIDataFetch />
+        {/* <APIDataFetch /> */}
       </React.Fragment>
     )
   }

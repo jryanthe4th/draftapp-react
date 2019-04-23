@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
 
 const draft = [
   {round:'Round1', draftPicks:[
@@ -110,27 +110,6 @@ const DraftPick = props =>
     <StyledDraftPickPosition playerPosition={props.playerPosition}>{props.playerPosition}</StyledDraftPickPosition>
   </React.Fragment>
 
-// const getPositionColor = (props) => props.includes('RB') ? {bgcolor: '#fff'} : props.includes('WR') ? {bgcolor: '#555'} : props.includes('TE') ? {bgcolor: '#fe3'} : {}
-
-createGlobalStyle`
-
-`
-
-const StyledDraftPickPosition = styled.span`
-  color: ${props => (props.playerPosition === 'QB' ? '#EA80FC' :
-                      (props.playerPosition === 'RB' ? '#18FFFF' :
-                       (props.playerPosition === 'WR' ? '#69F0AE' :
-                        (props.playerPosition === 'TE' ? '#CCFF90' :
-                          (props.playerPosition === 'DST' ? '#e57373' :
-                            (props.playerPosition === 'K' ? '#e57373' :
-                              '#fff'
-                            ))))))
-  };
-  font-weight: bold;
-  margin-top: auto;
-  margin-bottom: 6px;
-`
-
 const StyledTableContainer = styled.div`
   margin: 0 10 0 10;
   overflow-x: scroll;
@@ -158,30 +137,11 @@ const StyledTableColumn = styled.div`
   /* color: #7befb2; */
 `
 
-const StyledOwnerName = styled.span`
-  flex-direction: column;
-  display: inline-flex;
-  text-align: left;
-  padding-left: 1px;
-  font-size: 0.75em;
-  color: #fff;
-  /* font-weight: bold; */
-`
-
-const StyledDraftPickNumber = styled.span`
-  display: inline-flex;
-  text-align: right;
-  padding-left: 1px;
-  font-size: 0.75em;
-  color: #fff;
-  /* font-weight: bold; */
-`
-
 const StyledDraftPick = styled.span`
-  color: ${props => (props.playerPosition === 'QB' ? '#EA80FC' :
+  color: ${props => (props.playerPosition === 'WR' ? '#69F0AE' :
                       (props.playerPosition === 'RB' ? '#18FFFF' :
-                       (props.playerPosition === 'WR' ? '#69F0AE' :
-                        (props.playerPosition === 'TE' ? '#CCFF90' :
+                       (props.playerPosition === 'TE' ? '#CCFF90' :
+                        (props.playerPosition === 'QB' ? '#EA80FC' :
                           (props.playerPosition === 'DST' ? '#e57373' :
                             (props.playerPosition === 'K' ? '#e57373' :
                               '#fff'
@@ -191,6 +151,40 @@ const StyledDraftPick = styled.span`
   font-weight: bold;
   /* margin: auto; */
   /* color: #fff; */
+`
+
+const StyledDraftPickPosition = styled.span`
+  color: ${props => (props.playerPosition === 'WR' ? '#69F0AE' :
+                      (props.playerPosition === 'RB' ? '#18FFFF' :
+                       (props.playerPosition === 'TE' ? '#CCFF90' :
+                        (props.playerPosition === 'QB' ? '#EA80FC' :
+                          (props.playerPosition === 'DST' ? '#e57373' :
+                            (props.playerPosition === 'K' ? '#e57373' :
+                              '#fff'
+                            ))))))
+  };
+  font-weight: bold;
+  margin-top: auto;
+  margin-bottom: 6px;
+`
+
+const StyledOwnerName = styled.span`
+  flex-direction: column;
+  display: inline-flex;
+  text-align: left;
+  padding-left: 1px;
+  font-size: 0.75em;
+  color: #9E9E9E;
+  /* font-weight: bold; */
+`
+
+const StyledDraftPickNumber = styled.span`
+  display: inline-flex;
+  text-align: right;
+  padding-left: 1px;
+  font-size: 0.75em;
+  color: #9E9E9E;
+  /* font-weight: bold; */
 `
 
 export default CreateDraftTable
