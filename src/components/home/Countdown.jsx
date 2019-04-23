@@ -8,10 +8,10 @@ class Countdown extends Component {
     super(props)
 
     this.state = {
-      days: 0,
-      hours: 0,
-      min: 0,
-      sec: 0,
+      days: '--',
+      hours: '--',
+      min: '--',
+      sec: '--',
     }
   }
 

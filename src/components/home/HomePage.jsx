@@ -40,7 +40,7 @@ export default class HomePage extends Component {
     // const offset = -8;
     // const pacificTimeZone = utc + (3600000*offset)
     // currentDate.
-    const year = (currentDate.get('month') === 11 && currentDate.get('date') > 23) ? currentDate.get('year') +1 : currentDate.get('year')
+    const year = currentDate.get('year')
     return (
       <StyledHomePage className='homepage-container'>
         <SvgWrapper className='SvgWrapper'>
@@ -63,14 +63,14 @@ export default class HomePage extends Component {
         </Button>
         <Button
           component={Link}
-          to='/signin'
+          to='/signup'
           variant='outlined'
           size='medium'
           color='secondary'
           className='draft-player-button'
           style={{width: '200px', margin: '10px auto 10px auto', borderRadius: '0px'}}
         >
-          Sign In
+          Owner Sign Up
         </Button>
       </StyledHomePage>
     );
