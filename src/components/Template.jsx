@@ -6,7 +6,7 @@ import SwipeableTemporaryDrawer from './shared/SwipableNav'
 // import ErrorBox from './shared/ErrorBoxContainer';
 import HomePage from './home/HomePageContainer'
 import Draftboard from './draftboard/DraftboardContainer'
-import Register from './account/RegisterContainer'
+import Signup from './account/SignupContainer'
 
 export default function Template(props) {
   return (
@@ -15,7 +15,7 @@ export default function Template(props) {
         <SwipeableTemporaryDrawer />
         <Route exact path='/' component={HomePage} />
         <Route exact path='/draftboard' component={Draftboard} />
-        <Route exact path='/register' component={Register} />
+        <Route exact path='/signup' component={Signup} />
       </StyledTemplate>
     </Router>
   )
