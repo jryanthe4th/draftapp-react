@@ -6,6 +6,8 @@ import SwipeableTemporaryDrawer from './shared/SwipableNav'
 // import ErrorBox from './shared/ErrorBoxContainer';
 import HomePage from './home/HomePageContainer'
 import Draftboard from './draftboard/DraftboardContainer'
+import Draftboard2 from './draftboard/Draftboard2'
+import APIDataFetch from './draftboard/APIDataFetch'
 import Signup from './account/SignupContainer'
 
 export default function Template(props) {
@@ -15,6 +17,8 @@ export default function Template(props) {
         <SwipeableTemporaryDrawer />
         <Route exact path='/' component={HomePage} />
         <Route exact path='/draftboard' component={Draftboard} />
+        <Route exact path='/draftboard2' component={Draftboard2} />
+        <Route exact path='/APIDataFetch' component={APIDataFetch} />
         <Route exact path='/signup' component={Signup} />
       </StyledTemplate>
     </Router>

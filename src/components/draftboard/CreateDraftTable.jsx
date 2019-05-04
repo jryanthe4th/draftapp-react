@@ -27,7 +27,7 @@ const draft = [
     {pickNumber: '2.08', ownerName: 'Joe', playerSelected: '', playerPosition: ''},
     {pickNumber: '2.09', ownerName: 'Canaan', playerSelected: '', playerPosition: ''},
     {pickNumber: '2.10', ownerName: 'Joe', playerSelected: '', playerPosition: ''},
-    {pickNumber: '2.11', ownerName: 'Brayden', playerSelected: '', playerPosition: ''},
+    {pickNumber: '2.11', ownerName: 'Joe', playerSelected: '', playerPosition: ''},
     {pickNumber: '2.12', ownerName: 'Jake', playerSelected: '', playerPosition: ''},
   ]},
   {round:'Round3', draftPicks:[
@@ -58,7 +58,6 @@ const draft = [
     {pickNumber: '4.11', ownerName: 'Brayden', playerSelected: '', playerPosition: ''},
     {pickNumber: '4.12', ownerName: 'Jake', playerSelected: '', playerPosition: ''},
   ]},
-
   {round:'Round5', draftPicks:[
     {pickNumber: '5.01', ownerName: 'Austin', playerSelected: '', playerPosition: ''},
     {pickNumber: '5.02', ownerName: 'Danny', playerSelected: '', playerPosition: ''},
