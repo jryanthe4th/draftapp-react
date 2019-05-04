@@ -30,7 +30,7 @@ const DraftSelection = props =>
     <Name>{props.ownerName}</Name>
     <Bio>
       selects <strong>{props.playerPosition} {props.draftPick}</strong> with the{' '}
-      <strong>{props.pickNumber}</strong>
+      <strong>{props.pickNumber}</strong> draft selection.
     </Bio>
   </Card>
 
