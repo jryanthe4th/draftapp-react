@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const draft = [
   {round:'Round1', draftPicks:[
-    {pickNumber: '1.01', ownerName: 'Mack', playerSelected: '', playerPosition: ''},
+    {pickNumber: '1.01', ownerName: 'Mack', playerSelected: 'Josh Jacobs', playerPosition: 'RB'},
     {pickNumber: '1.02', ownerName: 'Brayden', playerSelected: '', playerPosition: ''},
     {pickNumber: '1.03', ownerName: 'Jensen', playerSelected: '', playerPosition: ''},
     {pickNumber: '1.04', ownerName: 'Riley', playerSelected: '', playerPosition: ''},
