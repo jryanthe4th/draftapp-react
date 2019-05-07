@@ -18,9 +18,9 @@ const draft = [
   ]},
   {round:'Round2', draftPicks:[
     {pickNumber: '2.01', ownerName: 'Joe', playerSelected: 'Mecole Hardman', playerPosition: 'WR'},
-    {pickNumber: '2.02', ownerName: 'Brayden', playerSelected: '', playerPosition: ''},
-    {pickNumber: '2.03', ownerName: 'Joe', playerSelected: '', playerPosition: ''},
-    {pickNumber: '2.04', ownerName: 'Riley', playerSelected: '', playerPosition: ''},
+    {pickNumber: '2.02', ownerName: 'Brayden', playerSelected: 'Hakeem Butler', playerPosition: 'WR'},
+    {pickNumber: '2.03', ownerName: 'Joe', playerSelected: 'Darrell Henderson', playerPosition: 'RB'},
+    {pickNumber: '2.04', ownerName: 'Riley', playerSelected: 'Marquise Brown', playerPosition: 'WR'},
     {pickNumber: '2.05', ownerName: 'Jake', playerSelected: '', playerPosition: ''},
     {pickNumber: '2.06', ownerName: 'Danny', playerSelected: '', playerPosition: ''},
     {pickNumber: '2.07', ownerName: 'Danny', playerSelected: '', playerPosition: ''},
