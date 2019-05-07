@@ -13,11 +13,11 @@ const draft = [
     {pickNumber: '1.08', ownerName: 'Jensen', playerSelected: 'Deebo Samuel', playerPosition: 'WR'},
     {pickNumber: '1.09', ownerName: 'Jordan', playerSelected: 'Noah Fant', playerPosition: 'TE'},
     {pickNumber: '1.10', ownerName: 'Jake', playerSelected: 'D.K. Metcalf', playerPosition: 'WR'},
-    {pickNumber: '1.11', ownerName: 'Riley', playerSelected: '', playerPosition: ''},
-    {pickNumber: '1.12', ownerName: 'Joe', playerSelected: '', playerPosition: ''},
+    {pickNumber: '1.11', ownerName: 'Riley', playerSelected: 'Kyler Murray', playerPosition: 'QB'},
+    {pickNumber: '1.12', ownerName: 'Joe', playerSelected: 'Damien Williams', playerPosition: 'RB'},
   ]},
   {round:'Round2', draftPicks:[
-    {pickNumber: '2.01', ownerName: 'Joe', playerSelected: '', playerPosition: ''},
+    {pickNumber: '2.01', ownerName: 'Joe', playerSelected: 'Mecole Hardman', playerPosition: 'WR'},
     {pickNumber: '2.02', ownerName: 'Brayden', playerSelected: '', playerPosition: ''},
     {pickNumber: '2.03', ownerName: 'Joe', playerSelected: '', playerPosition: ''},
     {pickNumber: '2.04', ownerName: 'Riley', playerSelected: '', playerPosition: ''},
@@ -139,10 +139,10 @@ const StyledTableColumn = styled.div`
 const StyledDraftPick = styled.span`
   color: ${props => (props.playerPosition === 'WR' ? '#69F0AE' :
                       (props.playerPosition === 'RB' ? '#18FFFF' :
-                       (props.playerPosition === 'TE' ? '#CCFF90' :
+                       (props.playerPosition === 'TE' ? '#e57373' :
                         (props.playerPosition === 'QB' ? '#EA80FC' :
-                          (props.playerPosition === 'DST' ? '#e57373' :
-                            (props.playerPosition === 'K' ? '#e57373' :
+                          (props.playerPosition === 'DST' ? '#CCFF90' :
+                            (props.playerPosition === 'K' ? '#CCFF90' :
                               '#fff'
                             ))))))
   };
@@ -155,10 +155,10 @@ const StyledDraftPick = styled.span`
 const StyledDraftPickPosition = styled.span`
   color: ${props => (props.playerPosition === 'WR' ? '#69F0AE' :
                       (props.playerPosition === 'RB' ? '#18FFFF' :
-                       (props.playerPosition === 'TE' ? '#CCFF90' :
+                       (props.playerPosition === 'TE' ? '#e57373' :
                         (props.playerPosition === 'QB' ? '#EA80FC' :
-                          (props.playerPosition === 'DST' ? '#e57373' :
-                            (props.playerPosition === 'K' ? '#e57373' :
+                          (props.playerPosition === 'DST' ? '#CCFF90' :
+                            (props.playerPosition === 'K' ? '#CCFF90' :
                               '#fff'
                             ))))))
   };
