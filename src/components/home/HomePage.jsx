@@ -50,7 +50,7 @@ export default class HomePage extends Component {
             svgStyle={{height: '60vh', width: '100%'}}
           />
         </SvgWrapper>
-        <Countdown date={`${year}-05-05T00:00:00`} />
+        {/* <Countdown date={`${year}-05-05T00:00:00`} /> */}
         <Button
           component={Link}
           to='/draftboard'
