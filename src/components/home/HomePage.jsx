@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Countdown from './Countdown'
-// import Moment from 'react-moment'
-// import 'moment-timezone'
 import dayjs from 'dayjs'
 
 // Styling
@@ -33,13 +31,6 @@ export default class HomePage extends Component {
   // const { classes } = props;
   render(props) {
     const currentDate = new dayjs()
-    // const currentDate = new Date().getUTCDate()
-    // const localTime = currentDate.getTime()
-    // const localOffset = currentDate.getTimezoneOffset() * 60000
-    // const utc = localTime + localOffset
-    // const offset = -8;
-    // const pacificTimeZone = utc + (3600000*offset)
-    // currentDate.
     const year = currentDate.get('year')
     return (
       <StyledHomePage className='homepage-container'>
