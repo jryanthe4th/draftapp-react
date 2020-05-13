@@ -26,51 +26,50 @@
 //   //     .then(data => data.json())
 //   //     .then(res => this.setState({ data: res.data }));
 //   // };
+//   // componentDidMount() {
+//   //   fetch('http://jsonplaceholder.typicode.com/users')
+//   //   .then(res => res.json())
+//   //   .then((data) => {
+//   //     this.setState({ contacts: data })
+//   //     console.log(data)
+//   //   })
+//   //   .catch(console.log)
+//   // }
+
 
 //   componentDidMount(data = {}) {
-//   //   fetch(API, {
-//   //     method: 'GET',
-//   //     // body: JSON.stringify(data),
-//   //     mode: 'no-cors',
-//   //     headers: {
-//   //       'Content-Type': 'application/json',
-//   //       'html-mime-type': 'text/html',
-//   //       'json': 'application/json',
-//   //       'text': 'text/html',
-//   //       'Access-Control-Allow-Origin': '*',
-//   //       }
-//   //     })
-//   //     .then(response => response.json())
-//   //     .then(response => console.log('--Success: ', JSON.stringify(response)))
-//   //     .catch(error => console.error('--Error: ', error))
-//   //     .then(
-//   //       (data => {
-//   //         this.setState({
-//   //           data,
-//   //           isLoaded: true,
-//   //           // leagueStandings: data.leagueStandings
-//   //         })
-//   //       },
-//   //       (error) => {
-//   //         this.setState({
-//   //           isLoaded: true,
-//   //           error
-//   //         })
-//   //       })
-//   //     )
-//       // .then((response) => {
-//       //   if (response.status === 200) {
-//       //     return response.json()
-//       //   }
-//       //   return null
-//       // })
-//       // .then(data => this.setState({ players: data.players }))
-//       // .then((data) => {
-//       //   this.setState({
-//       //     isLoaded: true,
-//       //     leagueStandings: data.players
-//       //   })
-//       // })
+//     fetch(API)
+//       .then(response => response.json())
+//       .then(response => console.log('--Success: ', JSON.stringify(response)))
+//       .catch(error => console.error('--Error: ', error))
+//       .then(
+//         (data => {
+//           this.setState({
+//             data,
+//             isLoaded: true,
+//             leagueStandings: data.leagueStandings
+//           })
+//         },
+//         (error) => {
+//           this.setState({
+//             isLoaded: true,
+//             error
+//           })
+//         })
+//       )
+//       .then((response) => {
+//         if (response.status === 200) {
+//           return response.json()
+//         }
+//         return null
+//       })
+//       .then(data => this.setState({ players: data.players }))
+//       .then((data) => {
+//         this.setState({
+//           isLoaded: true,
+//           leagueStandings: data.players
+//         })
+//       })
 
 //     // axios.get(API, {
 //     //   method: 'POST',

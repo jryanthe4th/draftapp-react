@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 
 import Draftboard from './Draftboard'
-// import APIDataFetch from './APIDataFetch'
+import APIDataFetch from './APIDataFetch'
 
 class DraftboardContainer extends Component {
 
